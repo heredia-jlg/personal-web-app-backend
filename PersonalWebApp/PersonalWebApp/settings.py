@@ -24,6 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = PWA_SECRET_KEY
 
+CSRF_COOKIE_NAME = "XCSRF-TOKEN"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -39,9 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
     'rest_framework',
-    'blog'
+    'blog',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -54,12 +56,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-]
-MIDDLEWARE_CLASSES = (
-    '../blog.cors.CorsMiddleware' 
-)
+] 
 
 ROOT_URLCONF = 'PersonalWebApp.urls'
+
 
 TEMPLATES = [
     {
