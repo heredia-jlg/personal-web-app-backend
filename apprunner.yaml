@@ -3,6 +3,7 @@ runtime: python3
 build:
   commands:
     build:
-      - pip install -r PersonalWebApp/requirements.txt
+      - ls
+      - pip install -r ./PersonalWebApp/requirements.txt
     post-build:
       - python manage.py test
