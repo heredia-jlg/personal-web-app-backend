@@ -3,8 +3,6 @@ runtime: python3
 build:
   commands:
     build:        
-      - pip install pipenv
-      - pipenv install
       - python -m venv venv
       - venv\Scripts\Activate
       - pip install -r requirements.txt
