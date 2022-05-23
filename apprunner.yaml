@@ -6,7 +6,7 @@ build:
       - ls
       - python -m venv venv
       - ls
-      - venv\Scripts\Activate
+      - .venv\Scripts\Activate
       - pip install -r requirements.txt
     post-build:
       - python manage.py test
