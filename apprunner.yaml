@@ -1,1 +1,9 @@
-
+version: 1.0
+runtime: python3 
+build:
+  commands:
+    build:
+      - pip install pipenv
+      - pipenv install 
+run: 
+  command: python3 manage.py runserver
