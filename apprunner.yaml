@@ -2,8 +2,11 @@ version: 1.0
 runtime: python3 
 build:
   commands:
-    build:
+    build:        
       - pip install pipenv
-      - pipenv install 
-run: 
-  command: python manage.py runserver
+      - pipenv install
+      - python -m venv venv
+      - venv\Scripts\Activate
+      - pip install -r requirements.txt
+    post-build:
+      - python manage.py test
