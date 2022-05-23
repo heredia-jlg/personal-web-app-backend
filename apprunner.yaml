@@ -5,6 +5,6 @@ build:
     build:
       - cd PersonalWebApp
       - ls
-      - pip install -r ./PersonalWebApp/requirements.txt
+      - pip install -r ./requirements.txt
     post-build:
       - python manage.py test
