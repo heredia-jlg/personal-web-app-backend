@@ -6,4 +6,4 @@ build:
       - pip install pipenv
       - pipenv install 
 run: 
-  command: python3 manage.py runserver
+  command: python manage.py runserver
